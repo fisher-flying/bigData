@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+html{
+  height: 100%;
+}
+body {
+  min-width: 1200px;
+  color: #7a7dab;
+  background: #262741 url('../images/deep-bg.jpg') no-repeat 0 0;
+  background-size: cover;
+  height: 100%;
+}
+.fr{float: right;}
+
+.router-view-container {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.menus-container {
+  list-style-type: none;
+  margin:30px 0 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #C5D2E1;
+}
+
+.menu li {
+  list-style: none;
+  line-height: 46px;
+  position: relative;
+  user-select: none;
+}
+
+.menu li.haschilds > ul {
+  display: none;
+}
+
+.menu li.haschilds.expanded > ul {
+  display: block;
+}
+
+.menu li a.router-link-active,
+.menu li.level2 a.router-link-active {
+  color: #ddd;
+}
+
+.menu li .menu-icon {
+  width: 35px;
+  font-size: 20px;
+}
+
+.menu li a.router-link-active,.menu li.active a {
+  color: #5DBCEC;
+}
+
+.menu li a {
+  display: block;
+  padding-left: 35px;
+  transition: background-color .2s;
+}
+
+.menu li.level1 a:hover {
+  color: #47CEEC;
+}
+.echarts-container{width:1200px; margin: 0 auto; position: relative}
+
+/* 边框线 */
+.echarts-container > div{
+  padding: 20px;
+  border-right:1px solid #2a254d;
+  border-bottom:1px solid #2a254d;
+  box-shadow: 2px 2px 1px rgba(255,255,255,0.1);
+}
+.echarts-container .no-bottom-border {border-bottom:none;}
+.echarts-container .no-right-border {border-right:none;}
+.echarts-container .no-bottom-shadow {box-shadow: 2px 0 0 rgba(255,255,255,0.1);}
+.echarts-container .no-right-shadow {box-shadow: 0 2px 0 rgba(255,255,255,0.1);}
+.echarts-container .no-right-left-shadow {box-shadow: 0 0 0 rgba(255,255,255,0.1);}
+
+/* 下拉菜单 */
+.echarts-container .to-right{margin-top: -34px;position: absolute;right: 0px;}
+.el-select-dropdown{background: url(../images/selectbg.png) no-repeat 0 0;background-size: cover;border: none;}
+.el-select-dropdown__item{height: 30px;line-height: 30px;color: #fff;}
+.el-select-dropdown__item.selected{color: #fff;}
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover{background: transparent;color: #40386b;}
+.echarts-container .to-right .el-select .el-input__inner{background: transparent;color: #a4a5c9;border: none;max-width: 164px;text-align: right;}
+.el-input--suffix .el-input__inner{padding-right: 25px;}
+.el-popper[x-placement^=top] .popper__arrow,
+.el-popper[x-placement^=top] .popper__arrow::after{left: 70%!important;border-top-color: #42adf3;}
+.el-popper[x-placement^=bottom] .popper__arrow,
+.el-popper[x-placement^=bottom] .popper__arrow::after{left: 70%!important;border-bottom-color: #42adf3;}
+
+/* 地图组件 */
+.map-body{position:relative;}
+.map-body .tit{position: absolute;top: -4%;}
+.map-body .current-time {margin: 0;position: absolute;top: 6%;left: 10%;}
+.map-body .people{margin: 0;position: absolute;top: 6%;left: 71%;}
+.map-body .num-tit{text-align:center;position:absolute;top: -10%;left: 21%;width: 50%;}
+.map-body .map{position:absolute;left:16%;top:12%;}
+.map-body .bar-top{position:absolute;left:-5%;top:16%}
+.map-body .bar-time{position:absolute;left:-5%;bottom:-16%}
+.map-body .pie{position:absolute;right:2%;bottom:-12%}
+
+/* 登錄 */
+.login-wrapper{background: url(../../assets/images/logoBg.jpg) no-repeat 0 0;background-size:100% 100%;}
+.login-wrapper .el-container{width:1200px;margin:auto;}
+.login-wrapper .el-main {margin: 160px 0;}
+.login-img {text-align: center;}
+.login-container {
+  background-clip: padding-box;margin: 100px auto;width: 378px;padding: 35px;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(207, 209, 225, 0.2);
+  background: rgba(242, 246, 252, 0.2);
+}
+.login-wrapper .title {margin: 0px auto 40px;line-height: 40px;text-align: center;color: #ffffff;}
+.login-wrapper .remember {margin: 0px 0px 35px 0px;}
+.login-wrapper .el-input__inner {border-radius: 0;}
+.login-wrapper .el-button-primary {width: 100%;border-radius: 2px;
+  background: -ms-linear-gradient(left, #40e2e9, #6d76e9); /* IE 10 */
+  background: -moz-linear-gradient(left, #40e2e9, #6d76e9); /*火狐*/
+  background: -webkit-gradient(linear, 0% 0%,0% 100%,from(#40e2e9),to(#6d76e9)); /*谷歌*/
+  background: -webkit-linear-gradient(left,#40e2e9, #6d76e9 ); /*Safari5.1 Chrome 10+*/
+  background: -o-linear-gradient(left, #40e2e9, #6d76e9); /*Opera 11.10+*/
+}
+.login-wrapper .el-checkbox__label {color: #fff;}
+.login-wrapper .el-footer {line-height: 100px;height: 100px !important;text-align: center;color: rgba(255,255,255,0.2);background: #272842;font-size: 12px;}
+.login-wrapper .el-footer p{margin:0;}
+.login-wrapper .el-input-group__prepend {background: #fff;color: #59a4e9;padding: 0 15px;}
